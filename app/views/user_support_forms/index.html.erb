@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Support Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Support type</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_support_forms.each do |user_support_form| %>
+      <tr>
+        <td><%= user_support_form.name %></td>
+        <td><%= user_support_form.email %></td>
+        <td><%= user_support_form.support_type_id %></td>
+        <td><%= user_support_form.message %></td>
+        <td><%= link_to 'Show', user_support_form %></td>
+        <td><%= link_to 'Edit', edit_user_support_form_path(user_support_form) %></td>
+        <td><%= link_to 'Destroy', user_support_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User support form', new_user_support_form_path %>

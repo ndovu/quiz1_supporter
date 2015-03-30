@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user_support_form.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user_support_form.email %>
+</p>
+
+<p>
+  <strong>Support type:</strong>
+  <%= @user_support_form.support_type_id %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @user_support_form.message %>
+</p>
+
+<%= link_to 'Edit', edit_user_support_form_path(@user_support_form) %> |
+<%= link_to 'Back', user_support_forms_path %>

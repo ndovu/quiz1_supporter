@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Support Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Support type name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @support_types.each do |support_type| %>
+      <tr>
+        <td><%= support_type.support_type_name %></td>
+        <td><%= link_to 'Show', support_type %></td>
+        <td><%= link_to 'Edit', edit_support_type_path(support_type) %></td>
+        <td><%= link_to 'Destroy', support_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Support type', new_support_type_path %>
